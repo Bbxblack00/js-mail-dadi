@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Mail e Sorte</title>
+    <style media="screen">
+      .til{
+        text-align: center;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="til" id="risultato"></h1>
+  </body>
+  <script type="text/javascript">
+
+
+    // REQUEST MAIL AND ANSWEAR
+    var mail = [esempio@uno.it, esempio@due.it, esempio@tre.it];
+    var mailIn = prompt('inserisci la tua mail : ');
+
+    if (mail == mailIn) {
+      document.getElementById('risultato').innerHTML = 'ACCESSO CONSENTITO';
+    } else {
+      document.getElementById('risultato').innerHTML = 'ACCESSO NEGATO';
+    }
+
+  </script>
+</html>
