@@ -11,19 +11,32 @@
     </style>
   </head>
   <body>
-    <h1 class="til" id="risultato"></h1>
+    <!-- <h1 class="til" id="risultato"></h1> -->
+    <h1 class="til" id="risultatouno"></h1>
+    <h1 class="til" id="risultatodue"></h1>
   </body>
   <script type="text/javascript">
 
 
     // REQUEST MAIL AND ANSWEAR
-    var mail = ['esempio', 'esempio@due.it', 'esempio@tre.it'];
-    var mailIn = prompt('inserisci la tua mail : ');
+    // var mail = ['esempio', 'esempio@due.it', 'esempio@tre.it'];
+    // var mailIn = prompt('inserisci la tua mail : ');
+    //
+    // if (mail == mailIn) {
+    //   document.getElementById('risultato').innerHTML = 'ACCESSO CONSENTITO';
+    // } else {
+    //   document.getElementById('risultato').innerHTML = 'ACCESSO NEGATO';
+    // }
 
-    if (mail == mailIn) {
-      document.getElementById('risultato').innerHTML = 'ACCESSO CONSENTITO';
+    var numberBot = (Math.random() * 6) + 1;
+    var numberMan = (Math.random() * 6) + 1;
+
+    if (numberBot > 6 || numberMan > 6) {
+      document.getElementById('risultatouno').innerHTML = 'Numero casuale del pc : ' + Math.floor(numberBot - 1);
+      document.getElementById('risultatodue').innerHTML = 'Il tuo numero casuale : ' + Math.floor(numberMan - 1);
     } else {
-      document.getElementById('risultato').innerHTML = 'ACCESSO NEGATO';
+      document.getElementById('risultatouno').innerHTML = 'Numero casuale del pc : ' + Math.floor(numberBot);
+      document.getElementById('risultatodue').innerHTML = 'Il tuo numero casuale : ' + Math.floor(numberMan);
     }
 
   </script>
